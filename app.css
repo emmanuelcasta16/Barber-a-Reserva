@@ -1,0 +1,86 @@
+/* app.css - Mobile App Styles (Light Version) for Paso Firme */
+
+:root {
+  color-scheme: light;
+}
+
+body.light {
+  background-color: #fcf9f8;
+  color: #1b1b1b;
+}
+
+/* Global transition support */
+@view-transition {
+  navigation: auto;
+}
+
+/* Mobile-first layout container */
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+  background-color: #fcf9f8;
+  box-shadow: 0 0 40px rgba(0,0,0,0.05);
+}
+
+/* Bottom Navigation Bar Styles - Fixed Glassy Light */
+.bottom-nav-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 100;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex !important;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Standard touch targets */
+.touch-target {
+  min-height: 48px;
+  padding: 12px;
+}
+
+/* Large App Buttons */
+.btn-primary-app {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary-app:active {
+  transform: scale(0.96);
+}
+
+/* Smooth Fade transition fallback */
+.page-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

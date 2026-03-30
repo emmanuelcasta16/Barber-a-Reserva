@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#393939",
+              "tertiary-container": "#3d3d3c",
+              "secondary-fixed-dim": "#f4bf32",
+              "surface-container-highest": "#353534",
+              "secondary": "#f4bf32",
+              "on-surface-variant": "#e2bfb9",
+              "inverse-primary": "#b12b1f",
+              "on-secondary-fixed-variant": "#5a4300",
+              "on-primary-container": "#ff8372",
+              "surface": "#131313",
+              "inverse-on-surface": "#313030",
+              "tertiary-fixed-dim": "#c8c6c5",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-tint": "#ffb4a8",
+              "secondary-container": "#cc9c00",
+              "secondary-fixed": "#ffdf9a",
+              "error-container": "#93000a",
+              "on-error": "#690005",
+              "tertiary": "#c8c6c5",
+              "surface-container-high": "#2a2a2a",
+              "on-background": "#e5e2e1",
+              "on-primary": "#690000",
+              "primary": "#ffb4a8",
+              "on-secondary": "#3f2e00",
+              "inverse-surface": "#e5e2e1",
+              "surface-dim": "#131313",
+              "on-tertiary": "#313030",
+              "on-tertiary-container": "#a9a7a7",
+              "on-tertiary-fixed-variant": "#474746",
+              "surface-variant": "#353534",
+              "on-secondary-fixed": "#251a00",
+              "surface-container": "#201f1f",
+              "on-surface": "#e5e2e1",
+              "on-primary-fixed-variant": "#8f1009",
+              "surface-container-low": "#1c1b1b",
+              "on-error-container": "#ffdad6",
+              "tertiary-fixed": "#e5e2e1",
+              "on-primary-fixed": "#410000",
+              "on-secondary-container": "#4a3600",
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "outline": "#a98985",
+              "primary-fixed-dim": "#ffb4a8",
+              "outline-variant": "#5a413d",
+              "on-tertiary-fixed": "#1c1b1b",
+              "primary-container": "#800101",
+              "primary-fixed": "#ffdad4"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full shadow-[0_20px_50px_rgba(229,226,225,0.05)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface" data-icon="menu">menu</span>
+</div>
+<span class="font-['Space_Grotesk'] font-bold tracking-[0.2em] text-xl uppercase text-neutral-100">BARBERÍA RESERVA</span>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="Barber profile photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a sharp professional barber with a manicured beard in a high-end studio setting with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8hW4oWKhfM5vB52EH0lI5D6TQzFKLYaTbPytRk1o8aekPogfKlIhZy19f4tpc6PeWCU2esoI3bHPnr5vI83WvEDJGn44GOYOzsIdwD5Jb9vLzzJNMQDz7UZuN1OpwIPoYivJllg_C_GJP3LmrH4XuHj6sSrh1E7RvADbIXYKSurRuFUyeP0Sit68MBW5se-WBij6jY6Eqi3bB5POIIUidpuAmR8_W4a4wkaoGIPEBc7yuZ9PlvalbQaYRTrAQqF0ymf3Kxm6N_is"/>
+</div>
+</nav>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<header class="px-6 mb-16 space-y-4">
+<h1 class="font-headline font-bold text-6xl md:text-8xl tracking-tighter uppercase leading-[0.9] text-on-surface">
+                ESCRIBE TU<br/>HISTORIA
+            </h1>
+<p class="text-on-surface-variant font-medium tracking-wide body-lg">
+                Selecciona tu servicio de autor.
+            </p>
+</header>
+<!-- Service Selection -->
+<section class="mb-12">
+<div class="px-6 mb-4 flex justify-between items-end">
+<h2 class="font-headline text-xs tracking-[0.3em] uppercase text-secondary">SERVICIOS</h2>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">Desliza para explorar</span>
+</div>
+<div class="flex overflow-x-auto gap-4 px-6 hide-scrollbar">
+<!-- Card 1 -->
+<div class="flex-none w-72 bg-surface-container-high p-6 rounded-xl group transition-all duration-300 hover:bg-surface-bright active:scale-95">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="content_cut">content_cut</span>
+<h3 class="font-headline text-xl font-bold mb-1 uppercase tracking-tight">Corte de Autor</h3>
+<p class="text-on-surface-variant text-sm mb-6">Técnica magistral adaptada a tu fisionomía.</p>
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold font-headline tracking-widest text-secondary">45 MIN</span>
+<span class="text-on-surface font-bold">$35.00</span>
+</div>
+</div>
+<!-- Card 2 (Active/Selected State Example) -->
+<div class="flex-none w-72 bg-surface-container-highest border border-secondary/20 p-6 rounded-xl group transition-all duration-300">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="brush">brush</span>
+<h3 class="font-headline text-xl font-bold mb-1 uppercase tracking-tight">Barba Ritual</h3>
+<p class="text-on-surface-variant text-sm mb-6">Perfilado con navaja y toalla caliente.</p>
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold font-headline tracking-widest text-secondary">30 MIN</span>
+<span class="text-on-surface font-bold">$25.00</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex-none w-72 bg-surface-container-high p-6 rounded-xl group transition-all duration-300 hover:bg-surface-bright">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="star">star</span>
+<h3 class="font-headline text-xl font-bold mb-1 uppercase tracking-tight">Combo Master</h3>
+<p class="text-on-surface-variant text-sm mb-6">La experiencia completa de transformación.</p>
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold font-headline tracking-widest text-secondary">75 MIN</span>
+<span class="text-on-surface font-bold">$55.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Barber Picker -->
+<section class="mb-12 px-6">
+<h2 class="font-headline text-xs tracking-[0.3em] uppercase text-secondary mb-8">MAESTROS BARBEROS</h2>
+<div class="flex gap-8 items-center overflow-x-auto hide-scrollbar py-2">
+<!-- Barber 1 -->
+<div class="flex flex-col items-center gap-3 flex-none">
+<div class="relative w-24 h-24 rounded-full p-1 border-2 border-secondary bg-surface shadow-[0_0_20px_rgba(244,191,50,0.2)]">
+<div class="w-full h-full rounded-full overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Julian" class="w-full h-full object-cover" data-alt="Black and white high-contrast editorial portrait of a male barber with a sharp undercut and intense gaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYaVY0K_yhaOMtJ5k94lf_fLi4vdoR26iEsg40J4vWJfHE6D81CjcRZiNyGJxPJCh2Me_IsT2U6Fk9PLdLIG7iqyvbVeX0WyUFw2FejYr6zE_-Fx8rwlmCU9BQ-jgS1HUz4ztINhDySkD3f-1MArcN0giVKe2l6eTr6skAJzVjGap9JxG1YBRGKkJYOFOaVBm3IbCb8N90W4IGY6_TuZ_1aIKjIWEHUCcfsTD2iZzhM-dumADylXqJKIzP3zjnhiyy11eb7rloeCE"/>
+</div>
+</div>
+<span class="font-headline text-xs font-bold tracking-widest uppercase">JULIAN</span>
+</div>
+<!-- Barber 2 -->
+<div class="flex flex-col items-center gap-3 flex-none opacity-40 hover:opacity-100 transition-opacity">
+<div class="relative w-24 h-24 rounded-full p-1 border border-outline-variant/20 bg-surface">
+<div class="w-full h-full rounded-full overflow-hidden grayscale">
+<img alt="Marco" class="w-full h-full object-cover" data-alt="Grayscale studio portrait of a sophisticated man with a well-groomed beard against a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApG4dzTtPffkA7oBtwe8rsj2qu_4Iz2m_pgqlfK1WvSFUTCUk3kf4WNj04qXcIf1HGxElJJtlCn9RGLW8FIE5uGa1MB9GeidtNAxr0Y-EDwRJ0jdwRdP05mcBzATOrdH5kSsegNY1LqSSdnpmb1_k8MgyRE3MKqtkZweIkOoGT8C8_J5AjNBZV0EERVJ06SL3zpqrWRj4RAKWmzhXMK1ZpDpFO8AOLhc71c1g2jqsFdgOUkXSyM6ZVQc4xaqaR4kfQtkoxQ_Qc5E8"/>
+</div>
+</div>
+<span class="font-headline text-xs font-bold tracking-widest uppercase">MARCO</span>
+</div>
+<!-- Barber 3 -->
+<div class="flex flex-col items-center gap-3 flex-none opacity-40 hover:opacity-100 transition-opacity">
+<div class="relative w-24 h-24 rounded-full p-1 border border-outline-variant/20 bg-surface">
+<div class="w-full h-full rounded-full overflow-hidden grayscale">
+<img alt="Santi" class="w-full h-full object-cover" data-alt="Editorial close-up of a stylish barber in a professional studio, black and white aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA65torA64cBRJZnOoLuFR0VDcxYK7x3KZ7ScLHR80jVuX8RNH6d1EBThtO41gBfobLecMS40w7hhK4Nt5PY_oJoSRrJXI-G58MgiuaHXZIs8Yg4cdNHxCoqKIZw6NlduR99lfDZdk7jtDS6M-CqDpZHeOYIgy2Xv3emVO79N-OHfCjFuttABmW2g9xA7nI9ypGuJ2YsU0mypggX2KDSPjQnPdLQubno-ygzPhTUIhNfH0mD_FlD7fwyBcxuEXhxY4_m5sro1jlHJk"/>
+</div>
+</div>
+<span class="font-headline text-xs font-bold tracking-widest uppercase">SANTI</span>
+</div>
+</div>
+</section>
+<!-- Datetime Selection -->
+<section class="px-6 mb-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Days List -->
+<div>
+<h2 class="font-headline text-xs tracking-[0.3em] uppercase text-secondary mb-6">FECHA</h2>
+<div class="space-y-2">
+<button class="w-full flex justify-between items-center p-4 bg-surface-container-high rounded-xl group hover:bg-surface-bright transition-colors">
+<span class="font-headline font-bold uppercase tracking-tight">Lunes 24 Oct</span>
+<span class="text-xs text-on-surface-variant font-medium">DISPONIBLE</span>
+</button>
+<button class="w-full flex justify-between items-center p-4 bg-secondary text-on-secondary rounded-xl">
+<span class="font-headline font-bold uppercase tracking-tight">Martes 25 Oct</span>
+<span class="text-[10px] font-bold tracking-widest bg-on-secondary/10 px-2 py-1 rounded">SELECCIONADO</span>
+</button>
+<button class="w-full flex justify-between items-center p-4 bg-surface-container-high rounded-xl group hover:bg-surface-bright transition-colors">
+<span class="font-headline font-bold uppercase tracking-tight">Miércoles 26 Oct</span>
+<span class="text-xs text-on-surface-variant font-medium">DISPONIBLE</span>
+</button>
+</div>
+</div>
+<!-- Time Grid -->
+<div>
+<h2 class="font-headline text-xs tracking-[0.3em] uppercase text-secondary mb-6">HORARIO</h2>
+<div class="grid grid-cols-3 gap-3">
+<button class="py-3 bg-surface-container-lowest border border-outline-variant/10 rounded-lg font-headline font-bold text-sm hover:border-secondary transition-colors">09:00</button>
+<button class="py-3 bg-surface-container-lowest border border-outline-variant/10 rounded-lg font-headline font-bold text-sm hover:border-secondary transition-colors">10:30</button>
+<button class="py-3 bg-secondary text-on-secondary rounded-lg font-headline font-bold text-sm shadow-[0_4px_15px_rgba(244,191,50,0.3)]">11:15</button>
+<button class="py-3 bg-surface-container-lowest border border-outline-variant/10 rounded-lg font-headline font-bold text-sm hover:border-secondary transition-colors">12:45</button>
+<button class="py-3 bg-surface-container-lowest border border-outline-variant/10 rounded-lg font-headline font-bold text-sm hover:border-secondary transition-colors">14:00</button>
+<button class="py-3 bg-surface-container-lowest border border-outline-variant/10 rounded-lg font-headline font-bold text-sm hover:border-secondary transition-colors text-on-surface/20 cursor-not-allowed">15:30</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Action -->
+<div class="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-surface via-surface/90 to-transparent z-40">
+<a href="resumen.html" class="w-full py-5 bg-primary-container text-tertiary-fixed rounded-full font-headline font-bold text-sm tracking-[0.2em] uppercase shadow-[0_10px_30px_rgba(128,1,1,0.4)] active:scale-95 transition-transform flex items-center justify-center">
+            RESERVAR AHORA
+        </a>
+</div>
+<!-- BottomNavBar (Hidden on desktop as per rules, using as destination check) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center p-4 bg-neutral-950/80 backdrop-blur-lg z-50 pointer-events-none opacity-0">
+<div class="flex flex-col items-center justify-center bg-amber-400 text-neutral-950 rounded-xl px-6 py-2">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold">RESERVE</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 px-6 py-2">
+<span class="material-symbols-outlined" data-icon="content_cut">content_cut</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold">SERVICES</span>
+</div>
+</nav>
+</body></html>
